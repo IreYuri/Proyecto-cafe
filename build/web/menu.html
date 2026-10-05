@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Menú principal | Cosecha Común</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Public+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="barra">
+    <p class="marca">Cosecha Común</p>
+    <div class="usuario">
+      <span id="userName"></span>
+      <span id="userRole" class="rol"></span>
+      <button id="logoutBtn" class="sec" type="button">Cerrar sesión</button>
+    </div>
+  </header>
+
+  <main class="contenido">
+    <h1>Bienvenido</h1>
+    <p class="sub">Elige el módulo con el que quieres trabajar.</p>
+    <div id="menuGrid" class="modulos" aria-live="polite"><p class="vacio">Cargando módulos…</p></div>
+    <p class="nota">Registrar una solicitud de micropréstamo no garantiza su aprobación.</p>
+  </main>
+
+  <script src="js/config.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/menu.js"></script>
+</body>
+</html>

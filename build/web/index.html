@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Acceso | Cosecha Común</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Public+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <main class="portal">
+    <form id="loginForm" class="tarjeta" novalidate>
+      <span class="eyebrow">Portal de la comunidad</span>
+      <h1>Cosecha Común</h1>
+      <p class="sub">Ingresa según tu rol en la comunidad cafetera.</p>
+
+      <div class="perfil-grupo" role="radiogroup" aria-label="Perfil de acceso">
+        <span>Selecciona tu perfil</span>
+        <div class="perfiles">
+          <input type="radio" name="perfil" id="perfilCaficultor" value="CAFICULTOR" checked>
+          <label for="perfilCaficultor"><span class="icono" aria-hidden="true">🌱</span>Caficultor</label>
+
+          <input type="radio" name="perfil" id="perfilComprador" value="COMPRADOR">
+          <label for="perfilComprador"><span class="icono" aria-hidden="true">🛍️</span>Comprador</label>
+
+          <input type="radio" name="perfil" id="perfilAdmin" value="ADMINISTRADOR">
+          <label for="perfilAdmin"><span class="icono" aria-hidden="true">🗂️</span>Administrador</label>
+        </div>
+      </div>
+
+      <div class="campo">
+        <div class="campo-tit">
+          <label for="usuario">Usuario</label>
+          <span class="marcador">Obligatorio</span>
+        </div>
+        <input type="text" id="usuario" name="usuario" autocomplete="username" required>
+      </div>
+
+      <div class="campo">
+        <div class="campo-tit">
+          <label for="clave">Contraseña</label>
+          <span class="marcador">Obligatorio</span>
+        </div>
+        <div class="clave-envoltorio">
+          <input type="password" id="clave" name="clave" autocomplete="current-password" required>
+          <button type="button" id="verClave" aria-label="Mostrar u ocultar la contraseña">Mostrar</button>
+        </div>
+        <button type="button" id="usarDemo" class="demo">Usar cuenta demo de este perfil</button>
+      </div>
+
+      <label class="recordar">
+        <input type="checkbox" id="recordar">
+        Recordar sesión en este equipo
+      </label>
+
+      <p id="errorMsg" class="error" role="alert" style="display:none"></p>
+
+      <button id="submitBtn" class="primario" type="submit">Ingresar a la plataforma</button>
+
+      <p class="enlaces"><a href="#">¿Olvidaste tu contraseña?</a></p>
+      <p class="pie">Proyecto académico USIL — Programación Orientada a Objetos II</p>
+    </form>
+  </main>
+
+  <script src="js/config.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>
